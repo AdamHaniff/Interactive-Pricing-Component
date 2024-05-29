@@ -4,3 +4,86 @@
 $color-catskill-white: #f1f5fe;
 $color-white: #fff;
 $color-cloud-burst: #293356;
+$color-regent-grey: #848ead;
+$color-ice-cold: #a4f3eb;
+$color-dark-turquoise: #10d8c4;
+$color-titan-white: #ecf0fb;
+$color-tropical-blue: #cfd8ef;
+$color-linen: #feede8;
+$color-atomic-tangerine: #ff8d68;
+$color-periwinkle: #becdff;
+
+// ********** FONT-FAMILY **********
+$font-manrope: "Manrope", sans-serif;
+
+// ********* FONT-WEIGHTS *********
+$fw-600: 600;
+$fw-800: 800;
+
+// ************* BASE *************
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  background: $color-white;
+  font-family: $font-manrope;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+// ********* 375px LAYOUT *********
+
+// ************ HEADER ************
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  border-radius: 0 0 0 19.15rem;
+  background: $color-catskill-white;
+  width: 100%;
+  height: 40rem;
+
+  &__texts {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 8.9rem;
+    position: relative;
+  }
+
+  &__main {
+    color: $color-cloud-burst;
+    font-size: 2rem;
+    font-weight: $fw-800;
+  }
+
+  &__sub-texts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $color-regent-grey;
+    font-size: 1.3rem;
+    font-weight: $fw-600;
+    line-height: 2.3rem;
+  }
+
+  &__circles {
+    display: block;
+    position: absolute;
+    top: -3.2rem;
+  }
+}
