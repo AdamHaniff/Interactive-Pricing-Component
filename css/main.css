@@ -29,6 +29,7 @@ body {
   background: #f1f5fe;
   width: 100%;
   height: 40rem;
+  position: relative;
 }
 .header__texts {
   display: inline-flex;
@@ -36,7 +37,7 @@ body {
   flex-direction: column;
   gap: 0.8rem;
   margin-top: 8.9rem;
-  position: relative;
+  z-index: 5;
 }
 .header__main {
   color: #293356;
@@ -55,5 +56,59 @@ body {
 .header__circles {
   display: block;
   position: absolute;
-  top: -3.2rem;
+  top: 5.7rem;
+}
+
+.pricing {
+  border-radius: 0.8rem;
+  background: #fff;
+  box-shadow: 0 2rem 3rem -0.5rem rgba(127, 137, 185, 0.15);
+  max-width: 32.7rem;
+  margin: 0 auto;
+  transform: translateY(-16.6rem);
+}
+.pricing__info {
+  padding: 3.4rem 1.2rem 3.8rem 2.4rem;
+}
+.pricing__traffic {
+  display: block;
+  color: #848ead;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 0.1714rem;
+  text-transform: uppercase;
+  margin-bottom: 4.1rem;
+}
+.pricing__traffic-slider {
+  width: 27.9rem;
+  height: 0.8rem;
+  border-radius: 0.5rem;
+  background: #ecf0fb;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+}
+.pricing__traffic-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 4rem;
+  height: 4rem;
+  background: #10d8c4;
+  border-radius: 50%;
+  margin-top: -1.6rem;
+  background-image: url(../images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.pricing__traffic-slider::-moz-range-thumb {
+  width: 4rem;
+  height: 4rem;
+  background: #10d8c4;
+  border-radius: 50%;
+  margin-top: -1.6rem;
+  background-image: url(../images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }/*# sourceMappingURL=main.css.map */
