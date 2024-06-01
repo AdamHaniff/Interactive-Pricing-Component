@@ -84,7 +84,8 @@ body {
   width: 27.9rem;
   height: 0.8rem;
   border-radius: 0.5rem;
-  background: #ecf0fb;
+  background: linear-gradient(to right, #a4f3eb 50%, #ecf0fb 50%);
+  transition: background 0.3s ease-in-out;
   outline: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -95,20 +96,9 @@ body {
   appearance: none;
   width: 4rem;
   height: 4rem;
-  background: #10d8c4;
   border-radius: 50%;
   margin-top: -1.6rem;
-  background-image: url(../images/icon-slider.svg);
+  background: red;
+  background-image: url(../images/icon-slider-thumb.svg);
   background-repeat: no-repeat;
-  background-position: center;
-}
-.pricing__traffic-slider::-moz-range-thumb {
-  width: 4rem;
-  height: 4rem;
-  background: #10d8c4;
-  border-radius: 50%;
-  margin-top: -1.6rem;
-  background-image: url(../images/icon-slider.svg);
-  background-repeat: no-repeat;
-  background-position: center;
 }/*# sourceMappingURL=main.css.map */

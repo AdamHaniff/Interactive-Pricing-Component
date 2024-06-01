@@ -118,7 +118,12 @@ body {
     width: 27.9rem;
     height: 0.8rem;
     border-radius: 0.5rem;
-    background: $color-titan-white;
+    background: linear-gradient(
+      to right,
+      $color-ice-cold 50%,
+      $color-titan-white 50%
+    );
+    transition: background 0.3s ease-in-out;
     outline: none;
     -webkit-appearance: none;
     appearance: none;
@@ -128,23 +133,11 @@ body {
       appearance: none;
       width: 4rem;
       height: 4rem;
-      background: $color-dark-turquoise;
       border-radius: 50%;
       margin-top: -1.6rem;
-      background-image: url(../images/icon-slider.svg);
+      background: red;
+      background-image: url(../images/icon-slider-thumb.svg);
       background-repeat: no-repeat;
-      background-position: center;
-    }
-
-    &::-moz-range-thumb {
-      width: 4rem;
-      height: 4rem;
-      background: $color-dark-turquoise;
-      border-radius: 50%;
-      margin-top: -1.6rem;
-      background-image: url(../images/icon-slider.svg);
-      background-repeat: no-repeat;
-      background-position: center;
     }
   }
 }
