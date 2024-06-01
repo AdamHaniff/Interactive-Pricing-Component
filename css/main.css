@@ -69,6 +69,7 @@ body {
 }
 .pricing__info {
   padding: 3.4rem 1.2rem 3.8rem 2.4rem;
+  border-bottom: 0.1rem solid #ecf0fb;
 }
 .pricing__traffic {
   display: block;
@@ -90,6 +91,9 @@ body {
   -webkit-appearance: none;
   -moz-appearance: none;
        appearance: none;
+  position: relative;
+  z-index: 10;
+  margin-bottom: 4rem;
 }
 .pricing__traffic-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -98,7 +102,79 @@ body {
   height: 4rem;
   border-radius: 50%;
   margin-top: -1.6rem;
-  background: red;
-  background-image: url(../images/icon-slider-thumb.svg);
+  background: #10d8c4;
+  background-image: url(../images/icon-slider.svg);
   background-repeat: no-repeat;
+  background-position: center;
+}
+.pricing__price-per-month {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3.4rem;
+}
+.pricing__price {
+  color: #293356;
+  font-size: 3.2rem;
+  font-weight: 800;
+  letter-spacing: -0.08rem;
+}
+.pricing__per-month {
+  color: #848ead;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.pricing__billing {
+  display: flex;
+  align-items: center;
+  margin-left: 2.05rem;
+}
+.pricing__billing-type {
+  color: #848ead;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.pricing__checkbox {
+  display: none;
+}
+.pricing__slider {
+  display: inline-block;
+  position: relative;
+  width: 4.3rem;
+  height: 2.2rem;
+  background: #cfd8ef;
+  border-radius: 1.5rem;
+  margin: 0 1.2rem;
+}
+.pricing__slider::before {
+  display: inline-block;
+  content: "";
+  width: 1.4rem;
+  height: 1.4rem;
+  background: #fff;
+  border-radius: 1.4rem;
+  position: absolute;
+  top: 0.4rem;
+  left: 0.4rem;
+  transition: transform 0.3s;
+}
+.pricing__checkbox:checked + .pricing__slider {
+  background: #10d8c4;
+}
+.pricing__checkbox:checked + .pricing__slider::before {
+  transform: translateX(2.1rem);
+}
+.pricing__billing-discount {
+  width: 4.1rem;
+  height: 1.9rem;
+  border-radius: 0.95rem;
+  background: #feede8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ff8d68;
+  font-size: 1rem;
+  font-weight: 800;
+  margin-left: 0.55rem;
 }/*# sourceMappingURL=main.css.map */
