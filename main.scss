@@ -179,6 +179,10 @@ body {
     font-weight: $fw-600;
   }
 
+  &__toggle {
+    margin: 0 1.2rem;
+  }
+
   &__checkbox {
     display: none;
   }
@@ -190,7 +194,6 @@ body {
     height: 2.2rem;
     background: $color-tropical-blue;
     border-radius: 1.5rem;
-    margin: 0 1.2rem;
 
     &::before {
       display: inline-block;
@@ -239,11 +242,15 @@ body {
   &__features {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1rem;
     list-style: none;
   }
 
   &__feature {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
     color: $color-regent-grey;
     font-size: 1.2rem;
     font-weight: $fw-600;
@@ -251,9 +258,23 @@ body {
     &::before {
       display: inline-block;
       content: "";
-      width: 0.6949rem;
-      height: 0.5042rem;
+      width: 0.7rem;
+      height: 0.6rem;
       background-image: url("../images/icon-check.svg");
+      background-size: cover;
     }
+  }
+
+  &__start-btn {
+    border: none;
+    border-radius: 2.05rem;
+    background: $color-cloud-burst;
+    width: 17rem;
+    height: 4.1rem;
+    color: $color-periwinkle;
+    text-align: center;
+    font-family: $font-manrope;
+    font-size: 1.2rem;
+    font-weight: $fw-800;
   }
 }

@@ -135,6 +135,9 @@ body {
   font-size: 1.2rem;
   font-weight: 600;
 }
+.pricing__toggle {
+  margin: 0 1.2rem;
+}
 .pricing__checkbox {
   display: none;
 }
@@ -145,7 +148,6 @@ body {
   height: 2.2rem;
   background: #cfd8ef;
   border-radius: 1.5rem;
-  margin: 0 1.2rem;
 }
 .pricing__slider::before {
   display: inline-block;
@@ -188,10 +190,14 @@ body {
 .pricing__features {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
   list-style: none;
 }
 .pricing__feature {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
   color: #848ead;
   font-size: 1.2rem;
   font-weight: 600;
@@ -199,7 +205,20 @@ body {
 .pricing__feature::before {
   display: inline-block;
   content: "";
-  width: 0.6949rem;
-  height: 0.5042rem;
+  width: 0.7rem;
+  height: 0.6rem;
   background-image: url("../images/icon-check.svg");
+  background-size: cover;
+}
+.pricing__start-btn {
+  border: none;
+  border-radius: 2.05rem;
+  background: #293356;
+  width: 17rem;
+  height: 4.1rem;
+  color: #becdff;
+  text-align: center;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
 }/*# sourceMappingURL=main.css.map */
