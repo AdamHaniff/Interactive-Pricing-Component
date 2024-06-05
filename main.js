@@ -5,6 +5,7 @@ import "regenerator-runtime/runtime";
 const slider = document.querySelector(".pricing__traffic-slider");
 const numPageviews = document.querySelector(".pricing__traffic");
 const price = document.querySelector(".pricing__price");
+const checkbox = document.querySelector(".pricing__checkbox");
 
 const pageviewLabels = {
   1: "10K Pageviews",
@@ -20,16 +21,17 @@ const colors = {
 };
 
 const pricingPerMonth = {
-  1: 8.0,
-  2: 12.0,
-  3: 16.0,
-  4: 24.0,
-  5: 36.0,
+  1: 8,
+  2: 12,
+  3: 16,
+  4: 24,
+  5: 36,
 };
 
 // EVENT LISTENER
 slider.addEventListener("input", function () {
   const sliderValue = this.value;
+  const fullPrice = pricingPerMonth[sliderValue];
 
   // Update the text content of 'numPageviews' based on the slider's current value
   numPageviews.textContent = pageviewLabels[sliderValue];
@@ -38,6 +40,24 @@ slider.addEventListener("input", function () {
   const percentage = (sliderValue - 1) * 25;
   this.style.background = `linear-gradient(to right, ${colors.iceCold} ${percentage}%, ${colors.titanWhite} ${percentage}%)`;
 
-  // Update the text content of 'price' based on the slider's current value
-  price.textContent = `$${pricingPerMonth[sliderValue].toFixed(2)}`;
+  // Update the text content of 'price' based on the slider's current value and if the checkbox is checked or not
+  if (checkbox.checked) {
+    const discountedPrice = `$${(fullPrice - fullPrice * 0.25).toFixed(2)}`;
+    price.textContent = discountedPrice;
+  } else {
+    price.textContent = `$${fullPrice.toFixed(2)}`;
+  }
+});
+
+checkbox.addEventListener("change", function () {
+  // Update the text content of 'price' based on the slider's current value and if the checkbox is checked or not
+  const sliderValue = slider.value;
+  const fullPrice = pricingPerMonth[sliderValue];
+
+  if (checkbox.checked) {
+    const discountedPrice = `$${(fullPrice - fullPrice * 0.25).toFixed(2)}`;
+    price.textContent = discountedPrice;
+  } else {
+    price.textContent = `$${fullPrice.toFixed(2)}`;
+  }
 });
