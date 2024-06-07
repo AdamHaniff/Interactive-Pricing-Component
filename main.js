@@ -28,6 +28,23 @@ const pricingPerMonth = {
   5: 36,
 };
 
+// FUNCTIONS
+function updateSliderBackground(sliderValue, slider) {
+  const percentage = (sliderValue - 1) * 25;
+  slider.style.background = `linear-gradient(to right, ${colors.iceCold} ${percentage}%, ${colors.titanWhite} ${percentage}%)`;
+}
+
+function updatePriceTextContent(fullPrice) {
+  if (checkbox.checked) {
+    const discountedPrice = `$${(fullPrice - fullPrice * 0.25).toFixed(2)}`;
+    price.textContent = discountedPrice;
+  } else {
+    price.textContent = `$${fullPrice.toFixed(2)}`;
+  }
+}
+
+// EVENT LISTENER CALLBACK FUNCTIONS
+
 // EVENT LISTENER
 slider.addEventListener("input", function () {
   const sliderValue = this.value;
@@ -37,27 +54,16 @@ slider.addEventListener("input", function () {
   numPageviews.textContent = pageviewLabels[sliderValue];
 
   // Update the background of the slider based on the slider's current value
-  const percentage = (sliderValue - 1) * 25;
-  this.style.background = `linear-gradient(to right, ${colors.iceCold} ${percentage}%, ${colors.titanWhite} ${percentage}%)`;
+  updateSliderBackground(sliderValue, this);
 
   // Update the text content of 'price' based on the slider's current value and if the checkbox is checked or not
-  if (checkbox.checked) {
-    const discountedPrice = `$${(fullPrice - fullPrice * 0.25).toFixed(2)}`;
-    price.textContent = discountedPrice;
-  } else {
-    price.textContent = `$${fullPrice.toFixed(2)}`;
-  }
+  updatePriceTextContent(fullPrice);
 });
 
 checkbox.addEventListener("change", function () {
-  // Update the text content of 'price' based on the slider's current value and if the checkbox is checked or not
   const sliderValue = slider.value;
   const fullPrice = pricingPerMonth[sliderValue];
 
-  if (checkbox.checked) {
-    const discountedPrice = `$${(fullPrice - fullPrice * 0.25).toFixed(2)}`;
-    price.textContent = discountedPrice;
-  } else {
-    price.textContent = `$${fullPrice.toFixed(2)}`;
-  }
+  // Update the text content of 'price' based on the slider's current value and if the checkbox is checked or not
+  updatePriceTextContent(fullPrice);
 });
