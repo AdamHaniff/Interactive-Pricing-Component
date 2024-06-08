@@ -44,9 +44,7 @@ function updatePriceTextContent(fullPrice) {
 }
 
 // EVENT LISTENER CALLBACK FUNCTIONS
-
-// EVENT LISTENER
-slider.addEventListener("input", function () {
+function handleSliderChange() {
   const sliderValue = this.value;
   const fullPrice = pricingPerMonth[sliderValue];
 
@@ -58,12 +56,16 @@ slider.addEventListener("input", function () {
 
   // Update the text content of 'price' based on the slider's current value and if the checkbox is checked or not
   updatePriceTextContent(fullPrice);
-});
+}
 
-checkbox.addEventListener("change", function () {
+function handleCheckboxChange() {
   const sliderValue = slider.value;
   const fullPrice = pricingPerMonth[sliderValue];
 
   // Update the text content of 'price' based on the slider's current value and if the checkbox is checked or not
   updatePriceTextContent(fullPrice);
-});
+}
+
+// EVENT LISTENER
+slider.addEventListener("input", handleSliderChange);
+checkbox.addEventListener("change", handleCheckboxChange);
