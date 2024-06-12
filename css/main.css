@@ -132,7 +132,6 @@ body {
   display: flex;
   align-items: center;
   margin-left: 2.05rem;
-  width: calc(100% - 4.8rem);
 }
 .pricing__billing-type {
   color: #848ead;
