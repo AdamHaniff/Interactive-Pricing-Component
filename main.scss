@@ -96,16 +96,11 @@ body {
   border-radius: 0.8rem;
   background: $color-white;
   box-shadow: 0 2rem 3rem -0.5rem $color-wild-blue-yonder-15-percent;
-
-  &-container {
-    max-width: 37.5rem;
-    padding: 0 2.4rem;
-    margin: 0 auto;
-    transform: translateY(-16.6rem);
-  }
+  margin: 0 auto;
+  transform: translateY(-16.6rem);
 
   &__info {
-    padding: 3.4rem 2.4rem 3.8rem;
+    padding: 3.4rem 1.2rem 3.8rem 2.4rem;
     border-bottom: 0.1rem solid $color-titan-white;
   }
 
@@ -122,6 +117,7 @@ body {
 
   &__traffic-slider {
     width: 100%;
+    max-width: 27.9rem;
     height: 0.8rem;
     border-radius: 0.5rem;
     background: linear-gradient(
@@ -283,6 +279,16 @@ body {
   }
 }
 
-// ***** 320px - 374px LAYOUT *****
-@media only screen and (max-width: 23.375em) {
+// ***** 320px - 330px LAYOUT *****
+@media only screen and (max-width: 20.625em) {
+  // *********** PRICING ***********
+  .pricing {
+    &__info {
+      padding: 3.4rem 2.4rem 3.8rem;
+    }
+
+    &__billing-type {
+      font-size: 1.05rem;
+    }
+  }
 }

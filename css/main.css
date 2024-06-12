@@ -64,15 +64,11 @@ body {
   border-radius: 0.8rem;
   background: #fff;
   box-shadow: 0 2rem 3rem -0.5rem rgba(127, 137, 185, 0.15);
-}
-.pricing-container {
-  max-width: 37.5rem;
-  padding: 0 2.4rem;
   margin: 0 auto;
   transform: translateY(-16.6rem);
 }
 .pricing__info {
-  padding: 3.4rem 2.4rem 3.8rem;
+  padding: 3.4rem 1.2rem 3.8rem 2.4rem;
   border-bottom: 0.1rem solid #ecf0fb;
 }
 .pricing__traffic {
@@ -87,6 +83,7 @@ body {
 }
 .pricing__traffic-slider {
   width: 100%;
+  max-width: 27.9rem;
   height: 0.8rem;
   border-radius: 0.5rem;
   background: linear-gradient(to right, #a4f3eb 50%, #ecf0fb 50%);
@@ -224,4 +221,13 @@ body {
   font-family: "Manrope", sans-serif;
   font-size: 1.2rem;
   font-weight: 800;
+}
+
+@media only screen and (max-width: 20.625em) {
+  .pricing__info {
+    padding: 3.4rem 2.4rem 3.8rem;
+  }
+  .pricing__billing-type {
+    font-size: 1.05rem;
+  }
 }/*# sourceMappingURL=main.css.map */
