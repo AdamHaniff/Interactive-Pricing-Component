@@ -45,6 +45,8 @@ body {
   height: 100%;
 }
 
+// ********* MOBILE LAYOUTS *********
+
 // ********* 375px LAYOUT *********
 
 // ************ HEADER ************
@@ -291,4 +293,37 @@ body {
       font-size: 1.05rem;
     }
   }
+}
+
+// ********* TABLET LAYOUT *********
+
+// ********** 768px LAYOUT **********
+@media only screen and (min-width: 48em) {
+  // ************ HEADER ************
+  .header {
+    height: 44.9rem;
+
+    &__texts {
+      gap: 1.2rem;
+      margin-top: 10.4rem;
+    }
+
+    &__main {
+      font-size: 2.8rem;
+    }
+
+    &__sub-texts {
+      flex-direction: row;
+      align-items: initial;
+      gap: 0.3rem;
+      font-size: 1.5rem;
+      line-height: initial;
+    }
+
+    &__circles {
+      top: 6.7rem;
+    }
+  }
+
+  // *********** PRICING ***********
 }

@@ -230,4 +230,26 @@ body {
   .pricing__billing-type {
     font-size: 1.05rem;
   }
+}
+@media only screen and (min-width: 48em) {
+  .header {
+    height: 44.9rem;
+  }
+  .header__texts {
+    gap: 1.2rem;
+    margin-top: 10.4rem;
+  }
+  .header__main {
+    font-size: 2.8rem;
+  }
+  .header__sub-texts {
+    flex-direction: row;
+    align-items: initial;
+    gap: 0.3rem;
+    font-size: 1.5rem;
+    line-height: initial;
+  }
+  .header__circles {
+    top: 6.7rem;
+  }
 }/*# sourceMappingURL=main.css.map */
