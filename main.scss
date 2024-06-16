@@ -12,6 +12,7 @@ $color-tropical-blue: #cfd8ef;
 $color-linen: #feede8;
 $color-atomic-tangerine: #ff8d68;
 $color-periwinkle: #becdff;
+$color-light-sea-green: #24aea1;
 $color-wild-blue-yonder-15-percent: rgba(127, 137, 185, 0.15);
 
 // ********** FONT-FAMILY **********
@@ -388,6 +389,23 @@ body {
     &__features {
       align-items: start;
       gap: 1.1rem;
+    }
+  }
+}
+
+// ****** DESKTOP HOVER STATES ******
+@media only screen and (min-width: 62em) {
+  // *********** PRICING ***********
+  .pricing {
+    &__traffic-slider {
+      &::-webkit-slider-thumb:hover {
+        cursor: pointer;
+      }
+
+      &::-webkit-slider-thumb:active {
+        cursor: grabbing;
+        background-color: $color-light-sea-green;
+      }
     }
   }
 }

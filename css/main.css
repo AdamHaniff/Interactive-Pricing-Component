@@ -305,4 +305,13 @@ body {
     align-items: start;
     gap: 1.1rem;
   }
+}
+@media only screen and (min-width: 62em) {
+  .pricing__traffic-slider::-webkit-slider-thumb:hover {
+    cursor: pointer;
+  }
+  .pricing__traffic-slider::-webkit-slider-thumb:active {
+    cursor: grabbing;
+    background-color: #24aea1;
+  }
 }/*# sourceMappingURL=main.css.map */

@@ -6,6 +6,7 @@ const slider = document.querySelector(".pricing__traffic-slider");
 const numPageviews = document.querySelector(".pricing__traffic");
 const price = document.querySelector(".pricing__price");
 const checkbox = document.querySelector(".pricing__checkbox");
+const discount = document.querySelector(".pricing__billing-discount");
 
 const pageviewLabels = {
   1: "10K Pageviews",
@@ -29,6 +30,14 @@ const pricingPerMonth = {
 };
 
 // FUNCTIONS
+function updateDiscountTextContent() {
+  if (window.innerWidth >= 768) {
+    discount.textContent = "25% discount";
+  } else {
+    discount.textContent = "25%";
+  }
+}
+
 function updateSliderBackground(sliderValue, slider) {
   const percentage = (sliderValue - 1) * 25;
   slider.style.background = `linear-gradient(to right, ${colors.iceCold} ${percentage}%, ${colors.titanWhite} ${percentage}%)`;
@@ -66,6 +75,10 @@ function handleCheckboxChange() {
   updatePriceTextContent(fullPrice);
 }
 
+// On initial load, update the text content of 'discount' based on the user's viewport width
+updateDiscountTextContent();
+
 // EVENT LISTENER
 slider.addEventListener("input", handleSliderChange);
 checkbox.addEventListener("change", handleCheckboxChange);
+window.addEventListener("resize", updateDiscountTextContent);
