@@ -314,4 +314,12 @@ body {
     cursor: grabbing;
     background-color: #24aea1;
   }
+  .pricing__slider:hover {
+    cursor: pointer;
+    background: #7aeadf;
+  }
+  .pricing__start-btn:hover {
+    cursor: pointer;
+    color: #fff;
+  }
 }/*# sourceMappingURL=main.css.map */
