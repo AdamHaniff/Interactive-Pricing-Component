@@ -1,0 +1,26 @@
+// ****** DESKTOP HOVER STATES ******
+@media only screen and (min-width: 62em) {
+  // *********** PRICING ***********
+  .pricing {
+    &__traffic-slider {
+      &::-webkit-slider-thumb:hover {
+        cursor: pointer;
+      }
+
+      &::-webkit-slider-thumb:active {
+        cursor: grabbing;
+        background-color: $color-light-sea-green;
+      }
+    }
+
+    &__slider:hover {
+      cursor: pointer;
+      background: $color-blue-lagoon;
+    }
+
+    &__start-btn:hover {
+      cursor: pointer;
+      color: $color-white;
+    }
+  }
+}
